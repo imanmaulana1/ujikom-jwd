@@ -1,5 +1,12 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 60px;
+}
+
 .navbar {
-  background-color: transparent !important;
+  background-color: #ffffff !important;
 }
 
 .nav-link.active {
@@ -11,6 +18,8 @@
   margin-inline: auto;
   border: 1px solid #dddddd;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .title {
@@ -20,4 +29,10 @@
 .subtitle {
   font-size: 20px;
   color: #1d1d1d;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #91c2d6;
 }

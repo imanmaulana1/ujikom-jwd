@@ -1,10 +1,10 @@
 <section class="container">
-    <div class="row mb-3">
+    <div class="row mt-4 mb-3">
         <div class="col">
-            <h1 class="title text-center">Daftar Beasiswa</h1>
+            <h1 class="title text-center mt-3">Daftar Beasiswa</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-5 mb-md-0 mb-lg-5">
         <div class="col">
             <div class="box-wrapper p-4">
                 <div class="row mb-4">
