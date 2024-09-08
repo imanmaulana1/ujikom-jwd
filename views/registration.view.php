@@ -1,5 +1,5 @@
 <section class="container">
-    <div class="row mt-5 mb-3">
+    <div class="row mb-3">
         <div class="col">
             <h1 class="title text-center">Daftar Beasiswa</h1>
         </div>
