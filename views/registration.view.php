@@ -68,10 +68,10 @@
                             </div>
                             <div class="pt-2 row justify-content-between g-4">
                                 <div class="col-12 col-md-4">
-                                    <button type="submit" class="btn btn-primary w-100">Daftar</button>
+                                    <button type="submit" class="btn btn-primary w-100" <?= meetsMinimumIPK(IPK) ? 'disabled' : '' ?>>Daftar</button>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <button class="btn btn-danger w-100">Cancel</button>
+                                    <a href="index.php" class="btn btn-danger w-100">Cancel</a>
                                 </div>
                             </div>
                         </form>

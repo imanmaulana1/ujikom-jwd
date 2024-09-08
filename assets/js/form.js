@@ -2,8 +2,6 @@ $(document).ready(function () {
   $('#myForm').on('submit', function (e) {
     e.preventDefault();
 
-    if (!meetsMinimumIPK()) return;
-
     if (!validateOptions()) return;
 
     this.submit();
@@ -38,9 +36,13 @@ $(document).ready(function () {
     const valueIPK = parseFloat($('#ipk').val());
 
     if (valueIPK < 3) {
-      alert('Nilai IPK Anda tidak memenuhi syarat');
+      alert('Nilai IPK Anda tidak memenuhi syarat.');
       return false;
     }
+
+    $('#semester').focus();
     return true;
   }
+
+  meetsMinimumIPK();
 });

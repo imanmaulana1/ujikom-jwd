@@ -36,3 +36,18 @@ footer {
   align-items: center;
   background-color: #91c2d6;
 }
+
+.img-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  height: 586px;
+}
+
+.container-narrow{
+  max-width: 920px;
+  margin-inline: auto;
+}
