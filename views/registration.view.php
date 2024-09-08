@@ -14,30 +14,30 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <form>
+                        <form id="myForm" action="registration_results.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-4 row">
                                 <label for="nama" class="col-sm-4 col-form-label">Masukkan Nama</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="nama" name="nama" aria-describedby="name">
+                                    <input type="text" class="form-control" id="nama" name="nama" aria-describedby="nama" required>
                                 </div>
                             </div>
                             <div class="mb-4 row">
                                 <label for="email" class="col-sm-4 col-form-label">Masukkan Email</label>
                                 <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email">
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" required>
                                 </div>
                             </div>
                             <div class="mb-4 row">
                                 <label for="nohp" class="col-sm-4 col-form-label">Nomor Hp</label>
                                 <div class="col-sm-8">
-                                    <input type="number" class="form-control" id="nohp" name="nohp">
+                                    <input type="number" class="form-control" id="nohp" name="nohp" required>
                                 </div>
                             </div>
                             <div class="mb-4 row">
                                 <label for="semester" class="col-sm-4 col-form-label">Semester saat ini</label>
                                 <div class="col-sm-8">
                                     <select id="semester" name="semester" class="form-select mb-3">
-                                        <option selected>Pilih</option>
+                                        <option value="" selected>Pilih</option>
                                         <?php for ($i = 1; $i <= 8; $i++): ?>
                                             <option value="<?= $i ?>"><?= $i ?></option>
                                         <?php endfor; ?>
@@ -54,7 +54,7 @@
                                 <label for="beasiswa" class="col-sm-4 col-form-label">Pilihan Beasiswa</label>
                                 <div class="col-sm-8">
                                     <select id="beasiswa" name="beasiswa" class="form-select mb-3" <?= meetsMinimumIPK(IPK) ? 'disabled' : '' ?>>
-                                        <option selected>Pilihan Beasiswa</option>
+                                        <option value="" selected>Pilihan Beasiswa</option>
                                         <option value="Non Akademik">Non Akademik</option>
                                         <option value="Akademik">Akademik</option>
                                     </select>
@@ -75,7 +75,6 @@
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
