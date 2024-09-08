@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Handle submit
   $('#myForm').on('submit', function (e) {
     e.preventDefault();
 
@@ -7,6 +8,7 @@ $(document).ready(function () {
     this.submit();
   });
 
+  // Validasi input option value
   function validateOptions() {
     const semester = $('#semester').val();
     const beasiswa = $('#beasiswa').val();
@@ -32,6 +34,7 @@ $(document).ready(function () {
     return true;
   }
 
+  // Validasi nilai IPK
   function meetsMinimumIPK() {
     const valueIPK = parseFloat($('#ipk').val());
 
@@ -40,7 +43,7 @@ $(document).ready(function () {
       return false;
     }
 
-    $('#semester').focus();
+    $('#beasiswa').focus();
     return true;
   }
 
