@@ -1,3 +1,3 @@
 <?php
 
-define('IPK', 3.4);
+define('IPK', 3.9);

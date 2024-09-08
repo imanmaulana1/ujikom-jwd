@@ -14,7 +14,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <form id="myForm" action="registration_results.php" method="POST" enctype="multipart/form-data">
+                        <form id="myForm" action="registration_form.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-4 row">
                                 <label for="nama" class="col-sm-4 col-form-label">Masukkan Nama</label>
                                 <div class="col-sm-8">
@@ -53,10 +53,13 @@
                             <div class="mb-4 row">
                                 <label for="beasiswa" class="col-sm-4 col-form-label">Pilihan Beasiswa</label>
                                 <div class="col-sm-8">
+
                                     <select id="beasiswa" name="beasiswa" class="form-select mb-3" <?= meetsMinimumIPK(IPK) ? 'disabled' : '' ?>>
-                                        <option value="" selected>Pilihan Beasiswa</option>
-                                        <option value="Non Akademik">Non Akademik</option>
-                                        <option value="Akademik">Akademik</option>
+                                        <?php foreach ($beasiswaOptions as $value => $label): ?>
+                                            <option value="<?= htmlspecialchars($value) ?>" <?= $idBeasiswa == $value ? 'selected' : '' ?>>
+                                                <?= htmlspecialchars($label) ?>
+                                            </option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>

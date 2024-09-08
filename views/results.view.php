@@ -3,29 +3,47 @@
     <div class="table-responsive">
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
-                <thead>
+                <thead class="text-center">
                     <tr>
-                        <th class="bg-primary text-white">Field</th>
-                        <th class="bg-primary text-white">Details</th>
+                        <th class="bg-primary text-white">No.</th>
+                        <th class="bg-primary text-white">Nama</th>
+                        <th class="bg-primary text-white">Email</th>
+                        <th class="bg-primary text-white">No.Hp</th>
+                        <th class="bg-primary text-white">Semester</th>
+                        <th class="bg-primary text-white">IPK Terakhir</th>
+                        <th class="bg-primary text-white">Beasiswa</th>
+                        <th class="bg-primary text-white">Berkas</th>
+                        <th class="bg-primary text-white">Status Pengajuan</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($results as $result): ?>
+                    <?php if (empty($data)): ?>
                         <tr>
-                            <th scope="row"><?= htmlspecialchars($result['label']) ?></th>
-                            <?php if ($result['label'] === 'File Berkas'): ?>
-                                <td>
+                            <td colspan="9" class="text-center">No data available</td>
+                        </tr>
+                    <?php else: ?>
+                        <?php
+                        $index = 1;
+                        foreach ($data as $item): ?>
+                            <tr>
+                                <td scope="row"><?= $index++ ?></td>
+                                <td scope="row"><?= htmlspecialchars($item['nama']) ?></td>
+                                <td scope="row"><?= htmlspecialchars($item['email']) ?></td>
+                                <td scope="row"><?= htmlspecialchars($item['nohp']) ?></td>
+                                <td scope="row"><?= htmlspecialchars($item['semester']) ?></td>
+                                <td scope="row"><?= htmlspecialchars($item['ipk']) ?></td>
+                                <td scope="row"><?= htmlspecialchars($item['beasiswa'] === '1' ? 'Akademik' : 'Non Akademik') ?></td>
+                                <td scope="row">
                                     <?php
-                                    $filePath = './uploads/' . $result['value']['name'];
+                                    $filePath = './uploads/' . htmlspecialchars($item['berkas']);
                                     $fileType = mime_content_type($filePath);
                                     ?>
-                                    <a href="<?= htmlspecialchars($filePath) ?>" download>Download Berkas</a>
+                                    <a href="<?= htmlspecialchars($filePath) ?>" download>Download (<?= $item['berkas'] ?>)</a>
                                 </td>
-                            <?php else: ?>
-                                <td> <?= htmlspecialchars($result['value']) ?></td>
-                            <?php endif ?>
-                        </tr>
-                    <?php endforeach; ?>
+                                <td scope="row"><?= htmlspecialchars($item['status_ajuan'] === '0' ? 'Pending' : 'Accepted') ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>

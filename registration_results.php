@@ -1,40 +1,26 @@
 <?php
 
+include './config/db.php';
 include './includes/functions.php';
 
 $pageTitle = 'Result';
 $content = './views/results.view.php';
 $jsFile = 'result.js';
 
-$results = [];
+$query = "SELECT * FROM pendaftaran_beasiswa";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$result = mysqli_query($conn, $query);
 
-    $nama = $_POST['nama'];
-    $email = $_POST['email'];
-    $nohp = $_POST['nohp'];
-    $semester = $_POST['semester'];
-    $beasiswa = $_POST['beasiswa'];
-    $file = $_FILES['file'];
-    $statusAjuan = 'Belum di verifikasi';
+if (mysqli_num_rows($result) > 0) {
+    $data = [];
 
-    // Simpan hasil input kedalam array
-    $results = [
-        'nama' => ['label' => 'Nama', 'value' => $nama],
-        'email' => ['label' => 'Email', 'value' => $email],
-        'nohp' => ['label' => 'No. Hp', 'value' => $nohp],
-        'semester' => ['label' => 'Semester', 'value' => $semester],
-        'beasiswa' => ['label' => 'Jenis Beasiswa', 'value' => $beasiswa],
-        'berkas' => ['label' => 'File Berkas', 'value' => $file],
-        'status' => ['label' => 'Status Ajuan', 'value' => $statusAjuan]
-    ];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
 
-
-    // Pindahkan file yang diunggah ke folder uploads
-    $targetDir = "uploads/";
-    $targetFile = $targetDir . basename($file["name"]);
-    move_uploaded_file($file["tmp_name"], $targetFile);
+    // _d($data);
 }
 
+mysqli_close($conn);
 
 include './includes/layout.php';

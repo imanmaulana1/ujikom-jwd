@@ -26,7 +26,7 @@
                         <h3 class="subtitle text-center">Akademik</h3>
                         <div class="card-body">
                             <p><strong>Deskripsi:</strong></p>
-                            <p>Beasiswa Akademik dirancang untuk mendukung mahasiswa yang memiliki prestasi akademis yang luar biasa. Program ini bertujuan untuk memberikan bantuan keuangan kepada siswa yang menunjukkan dedikasi tinggi terhadap studi mereka.</p>
+                            <p>Beasiswa Akademik dirancang untuk mendukung mahasiswa yang memiliki prestasi akademis yang luar biasa. Program ini berfokus kepada mahasiswa yang menunjukkan dedikasi tinggi terhadap studi mereka.</p>
                             <p><strong>Persyaratan:</strong></p>
                             <ul>
                                 <li>IPK minimum 3</li>
@@ -41,6 +41,7 @@
                                 <li>Transkrip Nilai</li>
                                 <li>Pas foto terbaru</li>
                             </ul>
+                            <a href="registration_form.php?id=1" class="btn btn-success">Daftar Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +50,7 @@
                         <h3 class="subtitle text-center">Non-Akademik</h3>
                         <div class="card-body">
                             <p><strong>Deskripsi:</strong></p>
-                            <p>Beasiswa Non-Akademik ditujukan untuk individu yang menunjukkan bakat atau kontribusi luar biasa di luar bidang akademis. Program ini berfokus pada prestasi dalam olahraga, seni, atau kegiatan komunitas.</p>
+                            <p>Beasiswa Non-Akademik ditujukan untuk mahasiswa yang menunjukkan bakat atau kontribusi luar biasa di luar bidang akademis. Program ini berfokus pada prestasi dalam olahraga, seni, atau kegiatan komunitas.</p>
                             <p><strong>Persyaratan:</strong></p>
                             <ul>
                                 <li>IPK minimum 3</li>
@@ -63,6 +64,7 @@
                                 <li>Sertifikat bidang keahlian</li>
                                 <li>Pas foto terbaru</li>
                             </ul>
+                            <a href="registration_form.php?id=2" class="btn btn-success">Daftar Sekarang</a>
                         </div>
                     </div>
                 </div>
