@@ -7,3 +7,9 @@ function _d($data)
     var_dump(($data));
     echo "</pre>";
 }
+
+
+function meetsMinimumIPK($ipk)
+{
+    return  $ipk >= 3 ? false : true;
+}

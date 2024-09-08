@@ -3,7 +3,9 @@
 include './includes/functions.php';
 include './includes/constants.php';
 
-$pageTitle = 'Form Registrasi';
+_d(meetsMinimumIPK(IPK));
 
-include './includes/header.php';
-include './views/registration.view.php';
+$pageTitle = 'Form Registrasi';
+$content = './views/registration.view.php';
+
+include './includes/layout.php';

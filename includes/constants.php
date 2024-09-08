@@ -1,3 +1,3 @@
 <?php
 
-const IPK = 3.14;
+define('IPK', 3.4);

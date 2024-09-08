@@ -3,6 +3,6 @@
 include './includes/functions.php';
 
 $pageTitle = 'Home';
+$content = './views/home.view.php';
 
-include './includes/header.php';
-include './views/home.view.php';
+include './includes/layout.php';
