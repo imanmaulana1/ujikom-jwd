@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  const urlParam = new URLSearchParams(window.location.search);
+  const message = urlParam.get('message');
+
+  if (message === 'success') {
+    alert('Data berhasil dimasukkan');
+  }
+
   // Handle submit
   $('#myForm').on('submit', function (e) {
     e.preventDefault();
